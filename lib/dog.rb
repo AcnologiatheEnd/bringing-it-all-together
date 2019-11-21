@@ -11,7 +11,7 @@ attr_reader :id
 
   def self.create_table
     sql = <<-SQL
-      CREATE TABLE IF NOT EXISTS dogs
+      "CREATE TABLE IF NOT EXISTS dogs"
     SQL
     
     DB[:conn].execute(sql)
