@@ -77,8 +77,8 @@ attr_reader :id
     self
   end 
 
-  def self.create(name)
-    temp_inst = self.new(name)
+  def self.create(attribute)
+    temp_inst = self.new(attribute)
     temp_inst.save
     temp_inst
   end
