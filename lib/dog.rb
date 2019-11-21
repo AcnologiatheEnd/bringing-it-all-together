@@ -26,9 +26,7 @@ attr_reader :id
   end
   
   def self.new_from_db(row)
-    sql = <<-SQL
-      SELECT *
-    SQL
+    temp_inst = Dog.new(row[1],row[2],row[0])
   end
   def save
     if self.id
