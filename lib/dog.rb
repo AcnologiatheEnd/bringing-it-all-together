@@ -62,4 +62,23 @@ attr_reader :id
       self.new_from_db(row)
     end.first
   end 
+
+  def save
+    if self.id
+      self.update
+    else
+      sql = <<-SQL
+      INSERT INTO dogs (name, breed) VALUES (?, ?)
+      SQL
+      DB[:conn].execute(sql, self.name, self.breed)
+      
+      @id = 
+  end 
+
+
+
+
+
+
+
 end 
