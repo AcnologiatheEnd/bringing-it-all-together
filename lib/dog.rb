@@ -73,6 +73,7 @@ attr_reader :id
       DB[:conn].execute(sql, self.name, self.breed)
       
       @id = DB[:conn].execute("SELECT last_insert_row_id() FROM dogs")[0][0]
+    end
   end 
 
 
