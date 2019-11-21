@@ -29,7 +29,6 @@ attr_reader :id
     temp_inst = Dog.new(row[1],row[2],row[0])
   end
   def save
-    if self.id
       
   end
 end 
