@@ -83,7 +83,7 @@ attr_reader :id
   end
   
   def self.find_or_create_by(name, breed)
-    
+    dog = DB[:conn].execute
   end
 
 
