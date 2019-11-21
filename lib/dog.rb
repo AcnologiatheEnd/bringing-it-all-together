@@ -78,7 +78,7 @@ attr_reader :id
   end 
 
   def self.create(name, breed)
-    temp_inst = Dog.new(name, breed)
+    temp_inst = self.new(name, breed)
     temp_inst.save
   end
 
