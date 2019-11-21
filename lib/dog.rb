@@ -81,6 +81,8 @@ attr_reader :id
     temp_inst = self.new(name)
     temp_inst.save
   end
+  
+  def self.find_or_create_by()
 
 
 
