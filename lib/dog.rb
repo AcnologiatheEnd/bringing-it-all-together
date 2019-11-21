@@ -28,7 +28,15 @@ attr_reader :id
   def self.new_from_db(row)
     temp_inst = Dog.new(name: row[1], breed: row[2], id: row[0])
   end
-  def save
-      
-  end
+  
+  def self.find_by_name(name)
+    sql = <<-SQL
+      SELECT *
+      FROM dogs 
+      WHERE name = ?
+    SQL
+    
+    DB[:conn].execute(SQL, name).map do |row|
+      self.new_from_db(row)
+    end.first
 end 
