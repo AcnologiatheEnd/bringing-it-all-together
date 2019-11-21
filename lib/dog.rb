@@ -80,6 +80,7 @@ attr_reader :id
   def self.create(name)
     temp_inst = self.new(name)
     temp_inst.save
+    temp_inst
   end
   
   def self.find_or_create_by(name:, breed:)
