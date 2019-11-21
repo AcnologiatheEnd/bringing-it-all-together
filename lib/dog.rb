@@ -86,7 +86,7 @@ attr_reader :id
     dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", name, breed)
     if !dog.empty?
       adog = dog[0]
-      dog = self.new(adog[1], adog[2], adog[3])
+      dog = self.new(id: adog[0], name: adog[1], breed: adog[2])
     else
       dog = self.create[name: name, breed: breed]
     end
