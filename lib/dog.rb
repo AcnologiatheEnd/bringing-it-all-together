@@ -38,7 +38,7 @@ attr_reader :id
     SQL
     
     DB[:conn].execute(SQL, name).map do |row|
-      ints = self.new_from_db(row)
+      self.new_from_db(row)
     end.first
   end
 end 
