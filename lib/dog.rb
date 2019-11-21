@@ -77,7 +77,9 @@ attr_reader :id
     self
   end 
 
-
+  def self.create(:name, :breed)
+    
+  end
 
 
 
