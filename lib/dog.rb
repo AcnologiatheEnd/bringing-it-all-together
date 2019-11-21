@@ -39,4 +39,5 @@ attr_reader :id
     DB[:conn].execute(SQL, name).map do |row|
       self.new_from_db(row)
     end.first
+  end
 end 
