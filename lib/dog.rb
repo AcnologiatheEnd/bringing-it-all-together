@@ -41,4 +41,11 @@ attr_reader :id
       self.new_from_db(row)
     end.first
   end
+  
+  def update
+    sql = <<-SQL
+      UPDATE 
+    SQL
+    
+  end
 end 
