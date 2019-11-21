@@ -88,7 +88,7 @@ attr_reader :id
       adog = dog[0]
       dog = self.new(adog[1], adog[2], adog[3])
     else
-      dog = self.create[]
+      dog = self.create[name:, breed:]
   end
 
 
