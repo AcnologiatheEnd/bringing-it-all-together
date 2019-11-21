@@ -72,7 +72,7 @@ attr_reader :id
       SQL
       DB[:conn].execute(sql, self.name, self.breed)
       
-      @id = 
+      @id = DB[:conn].execute("SELECT")[0][0]
   end 
 
 
