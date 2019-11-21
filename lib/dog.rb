@@ -82,7 +82,9 @@ attr_reader :id
     temp_inst.save
   end
   
-  def self.find_or_create_by()
+  def self.find_or_create_by(name, breed)
+    
+  end
 
 
 
