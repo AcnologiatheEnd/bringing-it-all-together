@@ -34,10 +34,11 @@ attr_reader :id
       SELECT *
       FROM dogs 
       WHERE name = ?
+      LIMIT 1
     SQL
     
     DB[:conn].execute(SQL, name).map do |row|
       ints = self.new_from_db(row)
-    end
+    end.first
   end
 end 
